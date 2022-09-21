@@ -52,7 +52,7 @@ class Page {
                     listOfProducts += '<div class="d-flex justify-content-between align-items-center">';
                     listOfProducts += '<div class="btn-group">';
                     listOfProducts += '<button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>';
-                    listOfProducts += '<button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-cart4"></i> Adicionar</button>';
+                    listOfProducts += '<button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>';
                     listOfProducts += '</div>';
                     listOfProducts += '</div>';
                     listOfProducts += '</div>';
