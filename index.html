@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <title></title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/assets/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
-    <link rel="icon" href="/assets/image/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
+  <link rel="icon" href="/assets/image/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
+
 <body>
-    <div class="container">
-        <header class="blog-header py-3">
-          <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
-              <a class="text-muted" href="#">Login</a>
-            </div>
-            <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#" id="store-name"></a>
-            </div>
-            <div class="col-4 d-flex justify-content-end align-items-center">
-              <a class="text-muted p-2" href="#">
-                <i class="bi bi-search"></i>
-              </a>
-              <a class="text-muted p-2" href="#">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </a>
-             
-              <a class="btn btn-sm btn-outline-secondary" href="#">Cadastrar-se</a>
-            </div>
-          </div>
-        </header>
-
-        
-  
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-between" id="categories">
-          </nav>
+  <div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <a class="text-muted" href="#">Login</a>
         </div>
-  
-        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-          <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic" id="title"></h1>
-            <p class="lead my-3" id="subtitle"></p>
-          </div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-dark" href="#" id="store-name"></a>
         </div>
-  
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="text-muted p-2" href="#">
+            <i class="bi bi-search"></i>
+          </a>
+          <a class="text-muted p-2" href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="#">Cadastrar-se</a>
+        </div>
       </div>
-  
-      
-  
-      <main role="main">    
-        <div class="album py-5 pt-3">
-            <section class="jumbotron text-center ">
-                <div class="container">
-                  <h1 class="jumbotron-heading" id="second-title"></h1>
-                  <p class="lead text-muted" id="second-subtitle"></p>
-                </div>
-              </section>
-          <div class="container">
-  
-            <div class="row" id="products">
+    </header>
 
-                
+    <div class="nav-scroller py-1 mb-2">
+      <nav class="nav d-flex justify-content-between" id="categories"></nav>
+    </div>
 
-              
-           
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic" id="title"></h1>
+        <p class="lead my-3" id="subtitle"></p>
+      </div>
+    </div>
+  </div>
 
-            </div>
-            
-          </div>
+  <main role="main">
+    <div class="album py-5 pt-3">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading" id="second-title"></h1>
+          <p class="lead text-muted" id="second-subtitle"></p>
         </div>
-  
-      </main>
-      <footer class="blog-footer">
-        <p>Sistema desenvolvido por <a href="#" id="author"></a></p>
-        <p>
-          <a href="#">Voltar ao topo</a>
-        </p>
-      </footer>
-      <script src="/assets/node_modules/jquery/dist/jquery.min.js" ></script>
-      <script src="/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="Page.js"></script>
+      </section>
+      <div class="container">
+        <div class="row" id="products"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="blog-footer">
+    <p>Sistema desenvolvido por <a href="#" id="author"></a></p>
+    <p><a href="#">Voltar ao topo</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="Page.js"></script>
 </body>
 
 </html>
