@@ -36,9 +36,11 @@ class Page {
 
                 this.adsTitle.innerHTML = data.adsTitle;
                 this.adsSubtitle.innerHTML = data.adsSubtitle;
-
-               
-                this.ads.style.backgroundColor = ''+data.adsBackgroundColor+'';
+             
+                this.ads.classList.remove('text-white');
+                this.ads.classList.remove('bg-dark');
+                this.ads.style.backgroundColor = data.adsBackgroundColor;
+                this.ads.style.color = data.adsFontColor;
 
                 this.secondTitle.innerHTML = data.secondTitle;
                 this.secondSubtitle.innerHTML = data.secondSubtitle;
@@ -71,9 +73,11 @@ class Page {
 
                 this.author.innerHTML = data.systemSettings[0].author;
             });
+
+            $(window).on("load", function () {
+                document.body.style.display = 'unset';
+            });
     }
-
 }
-
 
 new Page("database.json");
