@@ -2,13 +2,14 @@ class Page {
 
     storeName = document.getElementById("store-name");
     categories = document.getElementById("categories");
-    title = document.getElementById("title");
-    subtitle = document.getElementById("subtitle");
+    adsTitle = document.getElementById("adsTitle");
+    adsSubtitle = document.getElementById("adsSubtitle");
     secondTitle = document.getElementById("second-title");
-    secondSubtitle = document.getElementById("second-subtitle");
     secondSubtitle = document.getElementById("second-subtitle");
     products = document.getElementById("products");
     author = document.getElementById("author");
+
+    ads = document.getElementById("ads");
 
     constructor(jsonPath) {
         fetch(jsonPath)
@@ -33,11 +34,14 @@ class Page {
 
                 this.categories.innerHTML = listOfCategories;
 
-                this.title.innerHTML = data.pageConfiguration[0].title;
-                this.subtitle.innerHTML = data.pageConfiguration[0].subtitle;
+                this.adsTitle.innerHTML = data.adsTitle;
+                this.adsSubtitle.innerHTML = data.adsSubtitle;
 
-                this.secondTitle.innerHTML = data.pageConfiguration[0].secondTitle;
-                this.secondSubtitle.innerHTML = data.pageConfiguration[0].secondSubtitle;
+               
+                this.ads.style.backgroundColor = ''+data.adsBackgroundColor+'';
+
+                this.secondTitle.innerHTML = data.secondTitle;
+                this.secondSubtitle.innerHTML = data.secondSubtitle;
 
                 var listOfProducts = "";
             
