@@ -1,15 +1,18 @@
 {
-   "systemSettings": [{
-      "storeName": "Json Store",
-      "author": "Minicurso JSON"
-   }],
-   "pageConfiguration": [{
-      "title": "Só aqui você aproveita ofertas exclusivas",
-      "subtitle": "Promoção haaaja televisão, compre qualquer TV e concorra a um Playstation 5 por dia.",
-      "secondTitle": "Destaques",
-      "secondSubtitle": "Os melhores preços e os melhores produtos você encontra aqui, confira nossos destaques"
-   }],
-   "categories": [{
+   "systemSettings": [
+      {
+         "storeName": "Json Store",
+         "author": "Minicurso JSON"
+      }
+   ],
+   "adsTitle": "Só aqui você aproveita ofertas exclusivas",
+   "adsSubtitle": "Promoção haaaja televisão, compre qualquer TV e concorra a um Playstation 5 por dia.",
+   "adsBackgroundColor": "#53624b",
+   "adsFontColor": "#f1f1f1",
+   "secondTitle": "Destaques",
+   "secondSubtitle": "Os melhores preços e os melhores produtos você encontra aqui, confira nossos destaques",
+   "categories": [
+      {
          "name": "Livros"
       },
       {
@@ -40,7 +43,8 @@
          "name": "Comida"
       }
    ],
-   "products": [{
+   "products": [
+      {
          "name": "Smartphone Motorola Moto G22 128GB 4G Wi-Fi Tela 6.5'' Dual Chip 4GB RAM Câmera Quádrupla + Selfie 16MP - Azul",
          "imagePath": "https://images-americanas.b2w.io/produtos/01/00/img/4818919/7/4818919742_1GG.jpg",
          "price": "R$ 1.070,10",
