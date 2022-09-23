@@ -2,7 +2,8 @@
    "systemSettings": [
       {
          "storeName": "Json Store",
-         "author": "Minicurso JSON"
+         "author": "Minicurso JSON",
+         "CEP": "22041-011"
       }
    ],
    "adsTitle": "Só aqui você aproveita ofertas exclusivas",
