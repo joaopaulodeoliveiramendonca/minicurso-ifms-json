@@ -10,7 +10,7 @@
 
         //Serialização
         var frutasString = '{"nome":"Banana","preço":15.5,"tipo":["Prata","Maçã","Nanica","da Terra","Ouro"],"origem":"Brasil"}';
-        document.body.innerHTML += JSON.parse(frutasString);
+        //document.body.innerHTML += JSON.parse(frutasString);
 
         //Desserialização
         var frutasJSON = {
@@ -19,9 +19,10 @@
         "tipo": ["Prata", "Maçã", "Nanica", "da Terra", "Ouro"],
         "origem": "Brasil"
       };     
-      
-      document.body.innerHTML += JSON.stringify(frutasJSON);
-      console.log(JSON.stringify(frutasJSON));
+
+        document.write(frutasString);
+      //document.body.innerHTML += JSON.stringify(frutasJSON);
+      //console.log(JSON.stringify(frutasJSON));
 
 
 
