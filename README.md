@@ -2,6 +2,6 @@ Atividades - Semana de Ciência e Tecnologia - SCT 2022 - Coxim/MS, com o tema: 
 
 JSON: Introdução a Notação de Objetos em Javascript
 
-Parte pratica do Minicurso apresentado ao Instituto Federal de Mato Grosso do Sul, em 00/00/000
+Parte pratica do Minicurso apresentado ao Instituto Federal de Mato Grosso do Sul, em 07/10/2022
 
 
