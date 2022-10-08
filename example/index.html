@@ -68,7 +68,7 @@
           <div class="row justify-content-md-center">
             <div class="col-md-12 text-center">
               <img id="music-image" src="" class="rounded mx-auto d-block img-fluid" style="max-width: 260px;"">
-              <p id="music-name-author" class="fs-5">Music</p>
+              <p id="music-name-author" class="fs-5">name</p>
               <div class="col-sm-offset-4 embed-responsive embed-responsive-4by3 text-center">
                 <audio id="music-audio" controls class="embed-responsive-item text-center">
 
@@ -84,7 +84,94 @@
       </footer>
     </div>
   </main>
-  
+  <script>
+
+    var playlist = {
+      "songs": [
+        {
+          "author": "Skank",
+          "name": "Vou Deixar",
+          "imageUrl": "assets/skank.jpg",
+          "audioUrl": "assets/skank.mp3"
+        },
+        {
+          "author": "Coldplay",
+          "name": "Paradise",
+          "imageUrl": "assets/coldplay.jpg",
+          "audioUrl": "assets/coldplay.mp3"
+        },
+        {
+          "author": "Maroon 5",
+          "name": "Memories",
+          "imageUrl": "assets/marron5.jpg",
+          "audioUrl": "assets/marron5.mp3"
+        }
+      ]
+    }
+
+
+    function getQuote(pair) {
+      const url = "https://economia.awesomeapi.com.br/json/" + pair;
+      const options = {
+        method: "GET"
+      };
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("quote-coin").innerHTML = data[0].code + "/" + data[0].codein;
+          document.getElementById("quote-bid").innerHTML = '<i class="fa-sharp fa-solid fa-coins"></i> ' + data[0].bid;
+          document.getElementById("quote-name").innerHTML = data[0].name;
+        });
+    }
+
+    function getStock(stock) {
+      const url = "https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/" + stock;
+      const options = {
+        method: "GET"
+      };
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("stock-acao").innerHTML = data[0].cd_acao;
+          document.getElementById("stock-abertura").innerHTML = data[0].moeda_ref + " " + data[0].vl_abertura;
+          document.getElementById("stock-fechamento").innerHTML = data[0].moeda_ref + " " + data[0].vl_fechamento;
+          document.getElementById("stock-empresa").innerHTML = data[0].nm_empresa_rdz;
+        });
+    }
+
+    function getNews(subject) {
+      const url = 'https://newsapi.org/v2/everything?q=' + subject + '&sources?country=br&language=pt&apiKey=b15db0e082c44535bce7b5d73ca06300';
+      const options = {
+        method: "GET"
+      };
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.articles.length) {
+            var id = Math.floor(Math.random() * (data.articles.length - 0) + 0);
+            document.getElementById("news-title").innerHTML = data.articles[id].title;
+            document.getElementById("news-author").innerHTML = data.articles[id].author;
+            document.getElementById("news-content").innerHTML = data.articles[id].description;
+            document.getElementById("news-go").href = data.articles[id].url;
+          } else {
+            document.getElementById("news-title").innerHTML = "Nenhum resultado encontrado...";
+          }
+        });
+    }
+
+    function getMusic(id) {
+      console.log(this.playlist.songs[id]);
+      document.getElementById("music-image").setAttribute('src', this.playlist.songs[id].imageUrl);
+      document.getElementById("music-name-author").innerHTML = this.playlist.songs[id].name + " | " + this.playlist.songs[id].author;
+      document.getElementById("music-audio").innerHTML = '<source  src="' + this.playlist.songs[id].audioUrl + '" type="audio/mp3">';
+    }
+
+    getQuote("USD-BRL"); //USD-KRW, USD-BRL, EUR-USD, USD-JPY
+    getStock("AZUL4"); //ABEV3, AZUL4, ELET3, ENGI11, MGLU3, VALE3
+    getNews("Mercado Financeiro"); //Moda, Mercado Financeiro, Programação, Política
+    getMusic(2)
+    
+  </script>
 </body>
 
 </html>
